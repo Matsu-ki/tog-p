@@ -160,7 +160,7 @@ var swiper = new Swiper(".sue-client-swiper", {
 (function() {
    // https://dashboard.emailjs.com/admin/account
    emailjs.init({
-     publicKey: "X3nI7x_32Lt0tXNMc",
+     publicKey: "qWuft3xEmwTOhoFUq",
    });
 })();
 
@@ -170,7 +170,7 @@ sueContactFormAlert = document.querySelector(".contact-form-alert");
 sueContactForm.addEventListener('submit', function(event) {
    event.preventDefault();
    // these IDs from the previous steps
-   emailjs.sendForm('service_h5balrz', 'template_s3dfdnb', '#sue-contact-form')
+   emailjs.sendForm('service_hkycbum', 'template_vjgcf8a', '#sue-contact-form')
        .then(() => {
          //   console.log('SUCCESS!');
          sueContactFormAlert.innerHTML = "<span>Email enviado com sucesso, obrigada por entrar em contato!</span> <i class='ri-checkbox-circle-fill'></i>";
@@ -324,6 +324,117 @@ cursorHoverlinks.forEach((cursorHoverlink) => {
       cursorCircle.style.display = "block";
    });
 });*/
+
+/*===========================================================
+   particles
+   ======================================================*/
+
+   particlesJS("particles-js", {
+      particles: {
+          number: {
+              value: 20, // Número de partículas
+              density: {
+                  enable: true,
+                  value_area: 800
+              }
+          },
+          color: {
+              value: "#ffffff" // Cor branca para simular neve
+          },
+          shape: {
+              type: "circle", // Forma circular
+              stroke: {
+                  width: 0,
+                  color: "#000000"
+              },
+              polygon: {
+                  nb_sides: 5
+              },
+              image: {
+                  src: "img/github.svg",
+                  width: 100,
+                  height: 100
+              }
+          },
+          opacity: {
+              value: 0.5, // Opacidade para dar um efeito suave
+              random: false,
+              anim: {
+                  enable: false,
+                  speed: 1,
+                  opacity_min: 0.1,
+                  sync: false
+              }
+          },
+          size: {
+              value: 3, // Tamanho das partículas
+              random: true,
+              anim: {
+                  enable: false,
+                  speed: 40,
+                  size_min: 0.1,
+                  sync: false
+              }
+          },
+          line_linked: {
+              enable: false // Desativar linhas entre partículas
+          },
+          move: {
+              enable: true,
+              speed: 1, // Velocidade lenta para simular flutuação
+              direction: "none",
+              random: true, // Aleatoriedade no movimento
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                  enable: false,
+                  rotateX: 600,
+                  rotateY: 1200
+              }
+          }
+      },
+      interactivity: {
+          detect_on: "canvas",
+          events: {
+              onhover: {
+                  enable: false, // Desativar interação ao passar o mouse
+                  mode: "repulse"
+              },
+              onclick: {
+                  enable: false, // Desativar interação ao clicar
+                  mode: "push"
+              },
+              resize: true
+          },
+          modes: {
+              grab: {
+                  distance: 400,
+                  line_linked: {
+                      opacity: 1
+                  }
+              },
+              bubble: {
+                  distance: 400,
+                  size: 40,
+                  duration: 2,
+                  opacity: 8,
+                  speed: 3
+              },
+              repulse: {
+                  distance: 200,
+                  duration: 0.4
+              },
+              push: {
+                  particles_nb: 4
+              },
+              remove: {
+                  particles_nb: 2
+              }
+          }
+      },
+      retina_detect: true
+  });
 
 /* =====================================================
    Website dark/light theme
