@@ -847,7 +847,7 @@ body{
 }
 
 .about-img img{
-   width: 100%;
+   width: 120%;
    border-radius: 15px;
 }
 
@@ -866,7 +866,7 @@ body{
 }
 
 .about-description{
-   font-size: var(--base-font-size);
+   font-size: 17px;
    font-weight: var(--font-regular);
    line-height: 25px;
 }
@@ -980,6 +980,16 @@ body{
    background: var(--primary-color);
    width: 2px;
    height: 1780px;
+}
+
+.internships .resume-line{
+   background: var(--primary-color);
+   width: 2px;
+   height: 180px;
+}
+
+.resume-tab-content .internships{
+   margin-top: 40px;
 }
 
 .resume-items{
@@ -1143,7 +1153,7 @@ body{
 .service-container{
    display: grid;
    place-items: center;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(4, 1fr);
    column-gap: 35px;
    row-gap: 38px;
 }
