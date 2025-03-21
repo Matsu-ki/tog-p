@@ -844,6 +844,7 @@ body{
    justify-content: center;
    align-items: center;
    pointer-events: none;
+   bottom: 50px;
 }
 
 .about-img img{
@@ -1151,12 +1152,30 @@ body{
 /* =========================================
    Services
 ========================================= */
-.service-container{
-   display: grid;
-   place-items: center;
-   grid-template-columns: repeat(4, 1fr);
-   column-gap: 35px;
-   row-gap: 38px;
+
+/* Container para alinhar a imagem e os serviços */
+.service-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 30px; /* Espaçamento entre a imagem e os serviços */
+ }
+ 
+ /* Estilos para a imagem à esquerda */
+ .service-image img {
+   width: 90%;
+   height: auto;
+   border-radius: 10px;
+ }
+
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+  grid-template-rows: repeat(2, auto); /* Duas linhas */
+  column-gap: 35px;
+  row-gap: 38px;
+  width: 100%;
 }
 
 .service-card{
@@ -1336,6 +1355,7 @@ body{
    color: var(--color-02);
    font-size: var(--base-font-size);
    line-height: 22px;
+   text-align: justify;
 }
 
 /* =========================================
@@ -1916,7 +1936,7 @@ body{
    }
 
    .about-img {
-      width: 375px;
+      width: 320px!important;
    }
 
    .about-details {
@@ -1944,6 +1964,14 @@ body{
    .portfolio-container {
       grid-template-columns: repeat(2, 1fr);
    }
+
+  .service-container {
+   grid-template-columns: 1fr; 
+ }
+
+ .service-image img {
+   width: 100%; 
+ }
 }
 
 /* =========================================
